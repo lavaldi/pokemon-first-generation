@@ -1,4 +1,4 @@
-import Link from 'next/Link'
+import NextLink from 'next/link';
 import Layout from '../components/layout'
 
 export default function Home ({ allPokemon }) {
@@ -10,13 +10,13 @@ export default function Home ({ allPokemon }) {
         <ul className="space-y-2">
           {allPokemon.map((pokemon, index) => (
             <li key={index}>
-              <Link href={`/pokemon?id=${index + 1}`}>
+              <NextLink href={`/pokemon?id=${index + 1}`}>
                 <a className="border p-4 border-gray-100 capitalize flex items-center text-lg bg-gray-200 rounded-md">
                   <img src={pokemon.image} alt={pokemon.name} className="w-20 h-20 mr-3" />
                   <span className="mr-2 font-bold">{index + 1}</span>
                   {pokemon.name}
                 </a>
-              </Link>
+              </NextLink>
             </li>
           ))}
         </ul>

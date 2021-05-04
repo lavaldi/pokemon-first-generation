@@ -1,4 +1,4 @@
-import Link from 'next/Link'
+import NextLink from 'next/link';
 import Layout from '../components/layout'
 
 export default function Pokemon ({ pokemon }) {
@@ -13,7 +13,7 @@ export default function Pokemon ({ pokemon }) {
         <p key={index}>{type.type.name}</p>
       ))}
       <p className="mt-10 text-center">
-        <Link href="/"><a className="text-2xl underline">Home</a></Link>
+        <NextLink href="/"><a className="text-2xl underline">Home</a></NextLink>
       </p>
     </Layout>
   )
